@@ -1,0 +1,137 @@
+/* 🌐 Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🔥 Global Styles */
+* {
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+/* 🌙 Dark Purple Background */
+body {
+  @apply bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white;
+}
+
+/* 📦 Layout helpers */
+.flex-grow {
+  flex-grow: 1;
+}
+
+.footer-container {
+  margin-top: auto;
+  @apply text-purple-300;
+}
+
+/* 🧊 Cards (Glass Effect) */
+.card {
+  @apply bg-purple-800/60 backdrop-blur-md rounded-2xl shadow-lg p-4 border border-purple-700;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  @apply shadow-2xl bg-purple-700/70;
+}
+
+/* 🚀 Buttons */
+.btn {
+  @apply px-4 py-2 rounded-xl font-medium text-white;
+  @apply bg-gradient-to-r from-purple-600 to-indigo-600;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  @apply shadow-xl from-purple-500 to-indigo-500;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* 🧾 Inputs */
+.input {
+  @apply bg-purple-900/50 border border-purple-700 text-white rounded-lg px-3 py-2 outline-none;
+}
+
+.input::placeholder {
+  color: #c4b5fd;
+}
+
+.input:focus {
+  @apply border-purple-400 shadow-md;
+}
+
+/* ✨ Icons */
+.responsive-edit-icon,
+.responsive-delete-icon,
+.responsive-copy-icon {
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Hover Effects */
+.responsive-edit-icon:hover {
+  transform: scale(1.2) rotate(5deg);
+  filter: brightness(1.2);
+}
+
+.responsive-delete-icon:hover {
+  transform: scale(1.2) rotate(-5deg);
+  filter: brightness(1.2);
+}
+
+.responsive-copy-icon:hover {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+}
+
+/* Click Feedback */
+.responsive-edit-icon:active,
+.responsive-delete-icon:active,
+.responsive-copy-icon:active {
+  transform: scale(0.9);
+}
+
+/* 📱 Responsive Sizes */
+.responsive-edit-icon,
+.responsive-delete-icon {
+  width: 36px;
+  height: 36px;
+}
+
+.responsive-copy-icon {
+  width: 28px;
+  height: 24px;
+}
+
+@media (max-width: 640px) {
+  .responsive-edit-icon,
+  .responsive-delete-icon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .responsive-copy-icon {
+    width: 20px !important;
+    height: 16px !important;
+  }
+}
+
+/* 🌟 Glow Effect (Optional use class="glow") */
+.glow {
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+}
+
+/* 🎬 Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
